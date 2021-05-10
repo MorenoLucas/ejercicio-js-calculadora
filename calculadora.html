@@ -4,19 +4,146 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora</title>
+    <link rel="stylesheet" href="/ejercicio-js-calculadora/estilos.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <h1>Calculadora</h1>
-    <form action="" name="calculadora">
-      <input type="number" id="numero1" />
-      <input type="number" id="numero2" />
-      <input type="text" id="resultado" disabled="true" />
+    <div class="calculadora">
+      <h1>Calculadora</h1>
+      <form action="" name="calculadora">
+        <input type="number" id="numero1" class="form-control" />
+        <input type="number" id="numero2" class="form-control" />
+        <input
+          type="text"
+          id="resultado"
+          disabled="true"
+          class="form-control"
+        />
+        <div class="botones">
+          <button type="button" onclick="calcular(1)" class="btn btn-light">
+            +
+          </button>
+          <button type="button" onclick="calcular(2)" class="btn btn-light">
+            -
+          </button>
+          <button type="button" onclick="calcular(3)" class="btn btn-light">
+            *
+          </button>
+          <button type="button" onclick="calcular(4)" class="btn btn-light">
+            /
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="calcu">
+      <!-- resultado -->
+      <input type="text" id="resul" />
+      <!-- botones -->
+      <div class="boton">
+        <input type="button" id="1" value="1" onclick="obtenerNumero(1)" />
+        <input type="button" id="2" value="2" onclick="obtenerNumero(2)" />
+        <input type="button" id="3" value="3" onclick="obtenerNumero(3)" />
+        <input type="button" id="7" value="/" onclick="operar(4)" />
+        <input type="button" id="4" value="4" onclick="obtenerNumero(4)" />
+        <input type="button" id="5" value="5" onclick="obtenerNumero(5)" />
+        <input type="button" id="6" value="6" onclick="obtenerNumero(6)" />
+        <input type="button" id="*" value="*" onclick="operar(3)" />
+        <input type="button" id="7" value="7" onclick="obtenerNumero(7)" />
+        <input type="button" id="8" value="8" onclick="obtenerNumero(8)" />
+        <input type="button" id="9" value="9" onclick="obtenerNumero(9)" />
+        <input type="button" id="+" value="+" onclick="operar(1)" />
+        <input type="button" id="0" value="0" onclick="obtenerNumero(0)" />
+        <input type="button" id="," value="," onclick="coma()" />
+        <input type="button" id="=" value="=" onclick="esIgual()" />
+        <input type="button" id="-" value="-" onclick="operar(2)" />
+      </div>
+    </div>
+    <div class="formulario">
+      <h1>Formulario de Registro</h1>
 
-      <button type="button" onclick="calcular(1)">+</button>
-      <button type="button" onclick="calcular(2)">-</button>
-      <button type="button" onclick="calcular(3)">*</button>
-      <button type="button" onclick="calcular(4)">/</button>
-    </form>
+      <form name="formulario">
+        <div class="form-group">
+          <label for="">Email</label>
+          <input
+            class="form-control"
+            aria-describedby="emailHelp"
+            type="email"
+            id="email"
+            required
+            placeholder="Email"
+            pattern=".{3}"
+            onkeydown="validar()"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >Tiene que ser mayor a 3 caracteres.</small
+          >
+        </div>
+        <div class="form-group">
+          <label>Contraseña</label>
+          <input
+            class="form-control"
+            type="password"
+            id="password"
+            required
+            placeholder="Contraseña"
+            pattern=".{3}"
+            onkeydown="validar1()"
+          />
+          <small id="passHelp" class="form-text text-muted"
+            >Tiene que ser mayor a 3 caracteres.</small
+          >
+          <input
+            class="form-control"
+            type="password"
+            id="password2"
+            required
+            placeholder="Repite la contraseña "
+          />
+        </div>
+        <button type="button" onclick="crear()" class="btn btn-light">
+          Crear Usuario
+        </button>
+      </form>
+    </div>
+
+    <div class="login">
+      <h1>Login</h1>
+
+      <form name="login">
+        <label for="">Email</label>
+        <input
+          class="form-control"
+          type="email"
+          id="mail"
+          required
+          placeholder="Email"
+          onkeydown="validar2()"
+        />
+        <small id="mailHelp" class="form-text text-muted"
+          >Tiene que ser mayor a 3 caracteres.</small
+        >
+        <label>Contraseña</label>
+        <input
+          class="form-control"
+          type="password"
+          id="pass"
+          required
+          placeholder="Contraseña"
+          onkeydown="validar3()"
+        />
+        <small id="contraHelp" class="form-text text-muted"
+          >Tiene que ser mayor a 3 caracteres.</small
+        >
+        <button type="button" onclick="iniciar()" class="btn btn-light">
+          Iniciar
+        </button>
+      </form>
+    </div>
   </body>
   <script src="calculadora.js"></script>
 </html>
