@@ -51,29 +51,30 @@ function iniciar() {
   }
 }
 
-function validar() {
-  if (email.length < 3) {
+function validar(m) {
+  if (m.value.length < 3) {
     document.getElementById("emailHelp").style.display = "block";
+   
   } else {
     document.getElementById("emailHelp").style.display = "none";
   }
 }
-function validar1() {
-  if (pass.length < 3) {
+function validar1(p) {
+  if (p.value.length < 3) {
     document.getElementById("passHelp").style.display = "block";
   } else {
     document.getElementById("passHelp").style.display = "none";
   }
 }
-function validar2() {
-  if (mail.length < 3) {
+function validar2(m) {
+  if (m.value.length < 3) {
     document.getElementById("mailHelp").style.display = "block";
   } else {
     document.getElementById("mailHelp").style.display = "none";
   }
 }
-function validar3() {
-  if (contraseña.length < 3) {
+function validar3(c) {
+  if (c.value.length < 3) {
     document.getElementById("contraHelp").style.display = "block";
   } else {
     document.getElementById("contraHelp").style.display = "none";
