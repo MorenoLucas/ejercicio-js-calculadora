@@ -14,15 +14,24 @@ function calculadora(operacion, num1, num2) {
   }
   console.log(calculadora("+", 10, 10));
 
-  function restar(num1, num2) {
-    return num1 - num2;
-  }
-  function sumar(num1, num2) {
-    return num1 + num2;
-  }
-  function dividir(num1, num2) {
-    num2 === 0 ? alert("No se puede divir por cero") : num1 / num2;
-  }
-  function multiplicar(num1, num2) {
-    return num1 * num2;
-  }
+
+
+  function calcular(parametro) {
+    var num1 = parseInt(document.getElementById("numero1").value);
+    var num2 = parseInt(document.getElementById("numero2").value);
+    resultado.disabled = false;
+    switch (parametro) {
+      case 1:
+        document.forms["calculadora"]["resultado"].value = num1 + num2;
+        break;
+      case 2:
+        document.forms["calculadora"]["resultado"].value = num1 - num2;
+        break;
+      case 3:
+        document.forms["calculadora"]["resultado"].value = num1 * num2;
+        break;
+      case 4:
+        num2 === 0 ? alert("No se puede divir por cero") : num1 / num2;
+
+        break;
+    }}
