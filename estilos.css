@@ -1,8 +1,6 @@
-.calculadora,
-.calcu {
+.calculadora {
   width: 500px;
   margin: 0 auto;
-  padding: 50px;
 }
 
 .calculadora {
@@ -67,11 +65,17 @@ input[type="number"]::-webkit-outer-spin-button {
   grid-template-rows: repeat(2, auto);
   justify-items: center;
   align-items: center;
+  margin: 0 auto;
+  width: 250px;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: rgb(44, 44, 126);
 }
 #resul {
   grid-column: 1;
   grid-row: 1;
   margin: 10px;
+  width: 200px;
 }
 .boton {
   grid-row: 2;
@@ -82,6 +86,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .boton input {
   width: 50px;
   margin: 2px;
+  border-radius: 50px;
 }
 #igual {
   grid-column: 1 / span 2;
