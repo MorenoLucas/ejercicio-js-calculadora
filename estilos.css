@@ -1,6 +1,4 @@
 .calculadora,
-.formulario,
-.login,
 .calcu {
   width: 500px;
   margin: 0 auto;
@@ -56,12 +54,7 @@
   margin: 10px;
   width: 100px;
 }
-.formulario input {
-  margin: 10px;
-}
-.login input {
-  margin: 10px;
-}
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -78,13 +71,29 @@ input[type="number"]::-webkit-outer-spin-button {
 #resul {
   grid-column: 1;
   grid-row: 1;
+  margin: 10px;
 }
 .boton {
   grid-row: 2;
   display: grid;
   grid-template-columns: repeat(4, auto);
-  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(5, auto);
 }
 .boton input {
   width: 50px;
+  margin: 2px;
+}
+#igual {
+  grid-column: 1 / span 2;
+  grid-row: 5;
+  width: auto;
+}
+#borrar {
+  grid-column: 3 / span 2;
+  grid-row: 5;
+  width: auto;
+}
+#cero {
+  grid-column: 2 / span 2;
+  width: auto;
 }

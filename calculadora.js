@@ -19,8 +19,6 @@ function calcular(parametro) {
   }
 }
 
-
-
 let num1 = 0;
 let num2 = 0;
 let operacion;
@@ -73,4 +71,9 @@ function esIgual() {
 }
 function actualizar() {
   document.getElementById("resul").value = num1;
+}
+function borrar(){
+  num1 = 0;
+  num2 = 0;
+  actualizar();
 }

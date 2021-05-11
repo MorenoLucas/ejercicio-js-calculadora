@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora</title>
-    <link rel="stylesheet" href="/ejercicio-js-calculadora/estilos.css" />
+    <link rel="stylesheet" href="/estilos.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -45,6 +45,7 @@
       <input type="text" id="resul" />
       <!-- botones -->
       <div class="boton">
+        <input type="button" id="-" value="-" onclick="operar(2)" />
         <input type="button" id="1" value="1" onclick="obtenerNumero(1)" />
         <input type="button" id="2" value="2" onclick="obtenerNumero(2)" />
         <input type="button" id="3" value="3" onclick="obtenerNumero(3)" />
@@ -57,10 +58,12 @@
         <input type="button" id="8" value="8" onclick="obtenerNumero(8)" />
         <input type="button" id="9" value="9" onclick="obtenerNumero(9)" />
         <input type="button" id="+" value="+" onclick="operar(1)" />
-        <input type="button" id="0" value="0" onclick="obtenerNumero(0)" />
-        <input type="button" id="," value="," onclick="coma()" />
-        <input type="button" id="=" value="=" onclick="esIgual()" />
-        <input type="button" id="-" value="-" onclick="operar(2)" />
+
+        <input type="button" id="cero" value="0" onclick="obtenerNumero(0)" />
+        <input type="button" id="coma" value="," onclick="coma()" />
+        <input type="button" id="borrar" value="C" onclick="borrar()" />
+
+        <input type="button" id="igual" value="=" onclick="esIgual()" />
       </div>
     </div>
   </body>
